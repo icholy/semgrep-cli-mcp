@@ -46,7 +46,7 @@ type Paths struct {
 type OutputError struct {
 	Code    int    `json:"code"`
 	Level   string `json:"level"`
-	Type    string `json:"type"`
+	Type    any    `json:"type"`
 	Message string `json:"message"`
 }
 
