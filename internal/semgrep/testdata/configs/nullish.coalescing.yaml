@@ -1,0 +1,8 @@
+rules:
+  - id: nulling.coalescing.0
+    message: 'Use nullish coalescing'
+    pattern: 'if (!$X) { $X = $Z }'
+    languages:
+      - typescript
+      - javascript
+    severity: ERROR

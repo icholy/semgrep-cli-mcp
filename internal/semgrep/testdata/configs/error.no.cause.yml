@@ -1,0 +1,19 @@
+rules:
+  - id: err.no.cause
+    patterns:
+      - pattern-inside: |
+          catch ($ERR) {
+            ...
+            throw new CDLError($MSG, $NUM)
+            ...
+          }
+      - pattern-not-inside: |
+          catch ($ERR) {
+            ...
+            throw new CDLError($MSG, { ... })
+            ...
+          }
+      - pattern: throw new CDLError($MSG, $NUM)
+    message: 'The caught error should be passed as the CDLError cause'
+    languages: [javascript]
+    severity: WARNING
