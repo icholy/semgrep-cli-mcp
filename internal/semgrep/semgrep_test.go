@@ -63,6 +63,7 @@ func TestScan(t *testing.T) {
 				Start: Pos{Col: 1, Line: 4, Offset: 16},
 			},
 		},
+		Errors:  []OutputError{},
 		Version: "1.122.0",
 	})
 }

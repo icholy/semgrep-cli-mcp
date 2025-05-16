@@ -7,7 +7,7 @@ import (
 
 	mcpserver "github.com/mark3labs/mcp-go/server"
 
-	"github.com/semgrep-cli-mcp/tools"
+	"github.com/semgrep-cli-mcp/internal/tools"
 )
 
 func main() {
